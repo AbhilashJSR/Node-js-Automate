@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deployment process') {
             steps {
                 // Stop previous instance if any
                 sh 'pkill node || echo "No process to kill"'
@@ -37,7 +37,7 @@ pipeline {
 
     post {
         success {
-            echo 'App deployed successfully!'
+            echo 'App Deployed Successfully!'
         }
         failure {
             echo 'Deployment failed.'
